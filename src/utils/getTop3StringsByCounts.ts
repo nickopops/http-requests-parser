@@ -10,23 +10,23 @@ export const getTop3StringsByCounts = (
 
   const top3Strings: CountResult[] = [];
 
-  let thirdPlaceCount: number | undefined;
-
   for (const value of sortedStrings) {
     const count = stringCounts[value];
 
-    if (!count) continue;
+    if (count === undefined) continue;
 
-    if (top3Strings.length < 3) {
-      top3Strings.push({ value, count, rank: top3Strings.length + 1 });
-
-      if (top3Strings.length === 2) {
-        thirdPlaceCount = count;
-      }
-    } else if (count === thirdPlaceCount) {
-      top3Strings.push({ value, count, rank: 3 });
+    if (top3Strings.length === 0) {
+      top3Strings.push({ value, count, place: 1 });
     } else {
-      break;
+      const previousPlace = top3Strings.at(-1);
+
+      if (count === previousPlace?.count) {
+        top3Strings.push({ value, count, place: previousPlace.place });
+      } else if (top3Strings.length < 3) {
+        top3Strings.push({ value, count, place: top3Strings.length + 1 });
+      } else {
+        break;
+      }
     }
   }
 

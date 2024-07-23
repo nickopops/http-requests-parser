@@ -14,7 +14,7 @@ export const CountResultList = ({ data }: Props) => {
   return (
     <View>
       <View style={styles.row}>
-        <View style={styles.rankCol} />
+        <View style={styles.placeCol} />
         <View style={styles.valueCol} />
         <View style={styles.countCol}>
           <Text style={styles.countText}>Count</Text>
@@ -23,8 +23,8 @@ export const CountResultList = ({ data }: Props) => {
 
       {data.map((row) => (
         <View key={row.value} style={styles.row}>
-          <View style={styles.rankCol}>
-            <Text style={styles.colText}>{row.rank}</Text>
+          <View style={styles.placeCol}>
+            <Text style={styles.colText}>{row.place}</Text>
           </View>
           <View style={styles.valueCol}>
             <Text style={styles.colText}>{row.value}</Text>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingVertical: 8,
   },
-  rankCol: {
+  placeCol: {
     width: 40,
   },
   valueCol: {
