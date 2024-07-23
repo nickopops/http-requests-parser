@@ -54,7 +54,7 @@ export const FileUpload = ({ onSuccess }: Props) => {
   const onSelectExampleFile = async () => {
     try {
       const assets = await Asset.loadAsync(
-        require('../../assets/programming-task-example-data.log')
+        require('../../assets/programming-task-example-data.log'),
       );
       const localUri = assets[0]?.localUri;
 

@@ -5,7 +5,7 @@ import { getBaseURLPath } from './getBaseURLPath';
 import { getTop3StringsByCounts } from './getTop3StringsByCounts';
 
 export const analyzeLogFileString = (
-  fileString: string
+  fileString: string,
 ): {
   uniqueIPCount: number;
   top3IPs: CountResult[];

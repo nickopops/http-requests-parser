@@ -8,7 +8,7 @@ describe('getTop3StringsByCounts', () => {
         apple: 10,
         banana: 15,
         orange: 5,
-      })
+      }),
     ).toEqual([
       { value: 'banana', count: 15, place: 1 },
       { value: 'apple', count: 10, place: 2 },
@@ -23,7 +23,7 @@ describe('getTop3StringsByCounts', () => {
         banana: 10,
         mango: 7,
         orange: 10,
-      })
+      }),
     ).toEqual([
       { value: 'apple', count: 10, place: 1 },
       { value: 'banana', count: 10, place: 1 },
@@ -38,7 +38,7 @@ describe('getTop3StringsByCounts', () => {
         apple: 20,
         orange: 10,
         mango: 10,
-      })
+      }),
     ).toEqual([
       { value: 'apple', count: 20, place: 1 },
       { value: 'banana', count: 10, place: 2 },
@@ -54,7 +54,7 @@ describe('getTop3StringsByCounts', () => {
         orange: 5,
         banana: 10,
         mango: 5,
-      })
+      }),
     ).toEqual([
       { value: 'apple', count: 20, place: 1 },
       { value: 'banana', count: 10, place: 2 },

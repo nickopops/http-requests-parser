@@ -1,11 +1,11 @@
 import type { CountResult } from '@/types';
 
 export const getTop3StringsByCounts = (
-  stringCounts: Record<string, number>
+  stringCounts: Record<string, number>,
 ) => {
   const strings = Object.keys(stringCounts);
   const sortedStrings = strings.sort(
-    (a, b) => (stringCounts[b] ?? 0) - (stringCounts[a] ?? 0)
+    (a, b) => (stringCounts[b] ?? 0) - (stringCounts[a] ?? 0),
   );
 
   const top3Strings: CountResult[] = [];

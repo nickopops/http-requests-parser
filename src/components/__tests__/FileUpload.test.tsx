@@ -46,10 +46,10 @@ describe('FileUpload', () => {
     await user.press(screen.getByText('Upload Log File'));
 
     await waitFor(() =>
-      expect(FileSystem.readAsStringAsync).toHaveBeenCalledWith('mockUri')
+      expect(FileSystem.readAsStringAsync).toHaveBeenCalledWith('mockUri'),
     );
     await waitFor(() =>
-      expect(onSuccessMock).toHaveBeenCalledWith('mockFileString')
+      expect(onSuccessMock).toHaveBeenCalledWith('mockFileString'),
     );
   });
 
@@ -64,7 +64,7 @@ describe('FileUpload', () => {
     await userEvent.press(screen.getByText('Upload Log File'));
 
     await waitFor(() =>
-      expect(alertSpy).toHaveBeenCalledWith('Unable to upload')
+      expect(alertSpy).toHaveBeenCalledWith('Unable to upload'),
     );
   });
 });
